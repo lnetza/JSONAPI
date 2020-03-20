@@ -16,6 +16,7 @@ function cargarAPI(){
 
             let contenido=``;
             
+            //Recorremos el arreglo de objetos con forEach, obteniendo támbien su index
             respuesta.forEach((post,index) => {
                 contenido +=`
                     <h3>${post.title}</h3>
@@ -24,6 +25,7 @@ function cargarAPI(){
                     <h5>${index}</h5>
                 `;
             });
+            //A div listado le agregamos el contenido obtenido del ForEach
             document.getElementById('listado').innerHTML=contenido;
         }
     }
